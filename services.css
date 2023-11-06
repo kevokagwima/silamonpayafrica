@@ -1,0 +1,276 @@
+.payments {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.payment-text h1 {
+  font-size: 7ch;
+}
+
+.payment-text p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 2ch;
+}
+
+.payment-image {
+  max-width: max-content;
+}
+
+.payment-image img {
+  max-height: 20rem;
+}
+
+.services {
+  background-color: var(--blue-2);
+  color: whitesmoke;
+}
+
+.services h4 {
+  font-size: 3ch;
+  color: orange;
+}
+
+.services h1 {
+  max-width: 60%;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.services-box {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.service {
+  padding: 1rem;
+  border-radius: var(--radius);
+  background-color: var(--yellow);
+  background-image: url(./Images/to_do_vector_1.5c60cf89.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  padding-top: 5rem;
+  color: var(--black);
+  box-shadow: 0 0 20px -5px rgb(0, 0, 0, 0.3);
+}
+
+.service p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-family: var(--other-font);
+}
+
+.mashule {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.choose-mashule {
+  padding: 4rem 2rem;
+  border-radius: var(--radius);
+  background-color: var(--blue-2);
+  color: whitesmoke;
+  max-width: 30%;
+}
+
+.choose-mashule h1 {
+  font-size: 5ch;
+  margin-bottom: 2rem;
+}
+
+.choose-mashule h4 {
+  font-size: 3ch;
+}
+
+.choose-mashule p {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.choose-mashule button {
+  margin-top: 3rem;
+}
+
+.steps-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.step {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background-color: var(--light-blue);
+  display: grid;
+  place-content: center;
+}
+
+.step-icon,
+.step-info {
+  text-align: center;
+}
+
+.step-icon i {
+  font-size: 4ch;
+}
+
+.step-info h1 {
+  font-size: 3ch;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .payment-text h1 {
+    font-size: 6ch;
+  }
+
+  .payment-image img {
+    max-height: 18rem;
+  }
+
+  .choose-mashule {
+    max-width: 50%;
+  }
+
+  .steps-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .payment-text h1 {
+    font-size: 5ch;
+  }
+
+  .payment-text p {
+    font-size: 1.8ch;
+  }
+
+  .payment-image img {
+    max-height: 15rem;
+  }
+
+  .services h1 {
+    max-width: 100%;
+  }
+
+  .services-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mashule {
+    flex-direction: column;
+  }
+
+  .choose-mashule {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .payment-image img {
+    max-height: 10rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .payments {
+    flex-direction: column;
+  }
+
+  .payment-text h1 {
+    font-size: 7ch;
+  }
+
+  .payment-text p {
+    font-size: 2.3ch;
+  }
+
+  .payment-image img {
+    max-height: 20rem;
+  }
+
+  .step-info h1 {
+    font-size: 2ch;
+  }
+
+  .steps-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .payment-text h1 {
+    font-size: 5ch;
+  }
+
+  .payment-text p {
+    font-size: 2ch;
+  }
+
+  .services-box {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services h1 {
+    font-size: 3ch;
+    max-width: 100%;
+  }
+
+  .steps-box {
+    grid-template-columns: 1fr;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .payment-image img {
+    max-height: 15rem;
+  }
+
+  .services h1 {
+    font-size: 2.5ch;
+  }
+
+  .services-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .payment-text h1 {
+    font-size: 4ch;
+  }
+
+  .payment-image img {
+    max-height: 10rem;
+  }
+
+  .services h4 {
+    font-size: 2.5ch;
+  }
+
+  .services h1 {
+    font-size: 2.5ch;
+  }
+
+  .choose-mashule h1 {
+    font-size: 3ch;
+  }
+
+  .choose-mashule h4 {
+    font-size: 2.5ch;
+  }
+}

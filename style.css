@@ -1,0 +1,940 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --yellow: #fcf0d4;
+  --orange: #dc9542;
+  --purple: #a507e3;
+  --black: #444444;
+  --blue-1: #0d6efd;
+  --blue-2: #2760b6;
+  --blue-3: #329bd8;
+  --light-blue: #f0ffff;
+  --heading-font: "Raleway", sans-serif;
+  --paragraph-font: "Open Sans", sans-serif;
+  --other-font: "Nunito", sans-serif;
+  --radius: 0.3rem;
+}
+
+::-webkit-scrollbar {
+  max-width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-2);
+  border-radius: 30rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+p,
+span,
+b,
+li,
+input,
+label {
+  font-family: var(--paragraph-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: var(--other-font);
+}
+
+button {
+  border-radius: var(--radius);
+  padding: 0.7em 1em;
+  font-family: var(--other-font);
+  border: none;
+  background-color: var(--purple);
+  color: white;
+  font-size: 2.2ch;
+  cursor: pointer;
+}
+
+body {
+  color: var(--black);
+}
+
+section {
+  padding: 4rem 6rem;
+}
+
+header {
+  padding: 1rem 6rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  background-color: white;
+  box-shadow: 0 0 10px -5px rgb(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo img {
+  max-height: 2rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+#link {
+  font-family: var(--other-font);
+  font-size: 1.8ch;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#link:hover {
+  color: var(--purple);
+}
+
+#link i {
+  font-size: 2ch;
+  margin-top: 0.2rem;
+}
+
+.account {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+#signup {
+  font-size: 1.7ch;
+}
+
+.home {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  background-image: linear-gradient(
+    60deg,
+    var(--blue-2),
+    var(--blue-2),
+    var(--blue-3)
+  );
+  padding-block: 2rem;
+}
+
+.home-info {
+  color: whitesmoke;
+  max-width: 60%;
+}
+
+.home-info h1 {
+  font-size: 8ch;
+  color: white;
+}
+
+.home-info p {
+  font-size: 2.3ch;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.home-info button {
+  margin-top: 2rem;
+  box-shadow: 0 0 20px -5px rgb(0, 0, 0, 0.2);
+}
+
+.home-image {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  max-width: max-content;
+}
+
+.home-image img {
+  max-height: 30rem;
+  box-shadow: 0 0 20px -5px rgb(0, 0, 0, 0.5);
+}
+
+#img1 {
+  grid-column: 1/2;
+  grid-row: 1/1;
+  z-index: 1;
+}
+
+#img2 {
+  grid-column: 1/2;
+  grid-row: 1/1;
+  margin: 3rem 0 0 7rem;
+}
+
+.solutions h1 {
+  text-align: center;
+  font-size: 5ch;
+  font-weight: 800;
+}
+
+.solution-box {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.side-nav {
+  min-width: 20%;
+  max-width: 20%;
+  max-height: 20rem;
+  position: sticky;
+  top: 8rem;
+  padding: 1.2rem 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.side-nav h4 {
+  font-weight: 400;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.pay-in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.pay-in-info {
+  padding-inline: 0.5rem;
+}
+
+.pay-in-info h4 {
+  font-size: 4ch;
+  font-weight: 600;
+}
+
+.pay-in-info p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 2.1ch;
+}
+
+.pay-in-info ul {
+  margin-top: 2rem;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.pay-in-info ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#extend li {
+  grid-column: 1/3;
+}
+
+.pay-in-info ul li i {
+  color: var(--purple);
+  background-color: transparent;
+}
+
+.pay-in-info button {
+  margin-top: 2rem;
+  background-color: transparent;
+  outline: 1px solid var(--purple);
+  color: var(--purple);
+}
+
+.pay-in-image img {
+  max-height: 30rem;
+  border-radius: var(--radius);
+}
+
+#gif {
+  max-width: 80%;
+}
+
+.api {
+  background-color: var(--orange);
+  color: whitesmoke;
+}
+
+.api h1 {
+  font-size: 5ch;
+  color: white;
+}
+
+.api p {
+  margin-top: 1rem;
+  font-size: 2.5ch;
+  line-height: 1.5;
+}
+
+.api button {
+  margin-top: 2rem;
+  background-color: var(--purple);
+}
+
+.footer-logo img {
+  max-height: 2rem;
+}
+
+.footer-info hr {
+  margin: 1rem 0;
+  border: none;
+  outline: 1px solid var(--black);
+  opacity: 0.1;
+}
+
+.footer-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer-links h4,
+.news-letter h4 {
+  font-size: 2.5ch;
+}
+
+.footer-links #link,
+form {
+  margin-top: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+form input {
+  border: none;
+  background-color: var(--yellow);
+  border-radius: var(--radius);
+  padding: 1em;
+}
+
+input:focus {
+  outline: none;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+footer {
+  padding: 2rem 6rem;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer-text span {
+  font-size: 1.6ch;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-socials i {
+  font-size: 3ch;
+  color: var(--purple);
+}
+
+@media screen and (max-width: 1400px) {
+  .side-nav {
+    top: 5rem;
+  }
+
+  .side-nav h4 {
+    font-size: 1.6ch;
+  }
+
+  .pay-in-info h4 {
+    font-size: 3.5ch;
+  }
+
+  .pay-in-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .side-nav h4 {
+    font-size: 1.6ch;
+  }
+
+  .pay-in {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header,
+  section,
+  footer {
+    padding-inline: 4rem;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 6ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 2ch;
+  }
+
+  .home-image img {
+    max-height: 25rem;
+  }
+
+  .pay-in-info h4 {
+    font-size: 4ch;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .logo {
+    flex-grow: 1;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .home-info h1 {
+    font-size: 5ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 2ch;
+  }
+
+  .home-image img {
+    max-height: 20rem;
+  }
+
+  .solution-box {
+    margin-top: 3rem;
+  }
+
+  .footer-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pay-in-info {
+    padding: 0;
+  }
+
+  .pay-in-info h4 {
+    font-size: 3.5ch;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-info h1,
+  .api h1 {
+    font-size: 4ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 2ch;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .news-letter {
+    grid-column: 1/4;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 6ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 2.2ch;
+  }
+
+  .home-image img {
+    max-height: 20rem;
+  }
+
+  .solutions h1,
+  .api h1 {
+    font-size: 4ch;
+  }
+
+  .solution-box {
+    margin-top: 3rem;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .pay-in {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pay-in-info {
+    padding: 0;
+  }
+
+  .pay-in-info h4 {
+    font-size: 3ch;
+  }
+
+  .pay-in-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header,
+  section,
+  footer {
+    padding-inline: 2rem;
+  }
+
+  .logo {
+    flex-grow: 1;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 6ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 2.2ch;
+  }
+
+  .home-image img {
+    max-height: 30rem;
+  }
+
+  .solutions h1,
+  .api h1 {
+    font-size: 4ch;
+  }
+
+  .solution-box {
+    margin-top: 3rem;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .pay-in {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pay-in-info {
+    padding: 0;
+  }
+
+  .pay-in-info h4 {
+    font-size: 3ch;
+  }
+
+  .pay-in-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .news-letter {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header,
+  section,
+  footer {
+    padding-inline: 2rem;
+  }
+
+  .links,
+  .account {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 5ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 2ch;
+  }
+
+  .home-image img {
+    max-height: 30rem;
+  }
+
+  .solutions h1,
+  .api h1 {
+    font-size: 4ch;
+  }
+
+  .solution-box {
+    margin-top: 3rem;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .pay-in,
+  .pay-in-info ul,
+  .footer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .pay-in-info {
+    padding: 0;
+  }
+
+  .pay-in-info h4 {
+    font-size: 3ch;
+  }
+
+  .pay-in-image img {
+    max-width: 100%;
+  }
+
+  .news-letter {
+    grid-column: 1/2;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header,
+  section,
+  footer {
+    padding-inline: 1rem;
+  }
+
+  .links,
+  .account {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 5ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 2ch;
+  }
+
+  .home-image img {
+    max-height: 30rem;
+  }
+
+  .solutions h1,
+  .api h1 {
+    font-size: 4ch;
+  }
+
+  .solution-box {
+    margin-top: 3rem;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .pay-in,
+  .pay-in-info ul,
+  .footer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .pay-in-info {
+    padding: 0;
+  }
+
+  .pay-in-info h4 {
+    font-size: 3ch;
+  }
+
+  .pay-in-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header,
+  section,
+  footer {
+    padding-inline: 1rem;
+  }
+
+  .links,
+  .account {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 3.8ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 1.8ch;
+  }
+
+  .home-image img {
+    max-height: 20rem;
+  }
+
+  .solutions h1,
+  .api h1 {
+    font-size: 3ch;
+  }
+
+  .solution-box {
+    margin-top: 3rem;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .pay-in,
+  .pay-in-info ul,
+  .footer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .pay-in-info {
+    padding: 0;
+  }
+
+  .pay-in-info h4 {
+    font-size: 2.5ch;
+  }
+
+  .pay-in-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header,
+  section,
+  footer {
+    padding-inline: 1rem;
+  }
+
+  .links,
+  .account {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 3.5ch;
+  }
+
+  .home-info p,
+  .pay-in-info p,
+  li,
+  .api p {
+    font-size: 1.8ch;
+  }
+
+  .home-image img {
+    max-height: 15rem;
+  }
+
+  .solutions h1,
+  .api h1 {
+    font-size: 3ch;
+  }
+
+  .solution-box {
+    margin-top: 3rem;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .pay-in,
+  .pay-in-info ul,
+  .footer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .pay-in-info {
+    padding: 0;
+  }
+
+  .pay-in-info h4 {
+    font-size: 2.5ch;
+  }
+
+  .pay-in-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
