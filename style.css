@@ -30,7 +30,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--blue-2);
+  background-color: var(--purple);
   border-radius: 30rem;
 }
 
@@ -48,7 +48,8 @@ span,
 b,
 li,
 input,
-label {
+label,
+textarea {
   font-family: var(--paragraph-font);
 }
 
@@ -334,7 +335,8 @@ form {
   gap: 0.5rem;
 }
 
-form input {
+form input,
+form textarea {
   border: none;
   background-color: var(--yellow);
   border-radius: var(--radius);

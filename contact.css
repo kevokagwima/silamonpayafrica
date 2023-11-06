@@ -1,0 +1,138 @@
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  background-color: var(--light-blue);
+}
+
+.contact-info h1 {
+  font-size: 5ch;
+}
+
+.contact-info > p {
+  margin-top: 2rem;
+  max-width: 50%;
+  line-height: 1.5;
+}
+
+.contact-details {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-details > p {
+  padding: 0.5rem 1rem;
+  outline: 1px solid var(--black);
+  border-radius: var(--radius);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.location {
+  margin-top: 1rem;
+}
+
+iframe {
+  margin-top: 2rem;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: 0 4px 38px -3px rgba(124, 159, 240, 0.3);
+  min-height: 15rem;
+  min-width: 70%;
+}
+
+.contact-form {
+  box-shadow: 0 4px 38px -3px rgba(124, 159, 240, 0.3);
+  padding: 3rem 4rem;
+  background-color: white;
+  border-radius: var(--radius);
+}
+
+.contact-form h1 {
+  font-size: 4ch;
+  text-align: center;
+}
+
+.form {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.form input,
+.form textarea {
+  padding: 1.5em;
+}
+
+#extend,
+.form button {
+  grid-column: 1/3;
+}
+
+@media screen and (max-width: 1200px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  #extend,
+  .form button {
+    grid-column: 1/2;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  iframe {
+    min-width: 100%;
+  }
+
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #extend,
+  .form button {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-form {
+    padding-inline: 2rem;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  #extend,
+  .form button {
+    grid-column: 1/2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact-info h1 {
+    font-size: 4ch;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  .contact-form h1 {
+    font-size: 3ch;
+  }
+
+  .contact-form {
+    padding-inline: 1rem;
+  }
+}
