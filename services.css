@@ -1,17 +1,18 @@
 .payments {
   display: flex;
-  gap: 5rem;
+  gap: 2rem;
   align-items: center;
 }
 
 .payment-text h1 {
-  font-size: 7ch;
+  font-size: 7.5ch;
 }
 
 .payment-text p {
   margin-top: 1rem;
   line-height: 1.5;
   font-size: 2ch;
+  max-width: 80%;
 }
 
 .payment-image {
@@ -19,7 +20,8 @@
 }
 
 .payment-image img {
-  max-height: 20rem;
+  max-height: 30rem;
+  border-radius: var(--radius);
 }
 
 .services {
@@ -130,10 +132,6 @@
     font-size: 6ch;
   }
 
-  .payment-image img {
-    max-height: 18rem;
-  }
-
   .choose-mashule {
     max-width: 50%;
   }
@@ -153,7 +151,7 @@
   }
 
   .payment-image img {
-    max-height: 15rem;
+    max-height: 25rem;
   }
 
   .services h1 {
@@ -179,7 +177,7 @@
 
 @media screen and (max-width: 1000px) {
   .payment-image img {
-    max-height: 10rem;
+    max-height: 20rem;
   }
 }
 
@@ -188,16 +186,20 @@
     flex-direction: column;
   }
 
+  .payment-image {
+    align-self: flex-start;
+  }
+
+  .payment-image img {
+    max-height: 30rem;
+  }
+
   .payment-text h1 {
     font-size: 7ch;
   }
 
   .payment-text p {
     font-size: 2.3ch;
-  }
-
-  .payment-image img {
-    max-height: 20rem;
   }
 
   .step-info h1 {
@@ -233,11 +235,19 @@
     grid-template-columns: 1fr;
     min-width: 100%;
   }
+
+  .payment-image img {
+    max-height: 25rem;
+  }
+
+  .payment-text p {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .payment-image img {
-    max-height: 15rem;
+    max-height: 30rem;
   }
 
   .services h1 {
@@ -247,6 +257,10 @@
   .services-box {
     grid-template-columns: 1fr;
   }
+
+  .payment-image img {
+    max-height: 20rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -255,7 +269,7 @@
   }
 
   .payment-image img {
-    max-height: 10rem;
+    max-height: 16rem;
   }
 
   .services h4 {

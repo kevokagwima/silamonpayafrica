@@ -34,6 +34,11 @@
   border-radius: 30rem;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
 h1,
 h2,
 h3,
@@ -156,58 +161,36 @@ header {
   display: flex;
   gap: 5rem;
   align-items: center;
-  background-image: linear-gradient(
-    60deg,
-    var(--blue-2),
-    var(--blue-2),
-    var(--blue-3)
-  );
-  padding-block: 2rem;
+  background-color: #2760b68b;
+  background-image: url(./Images/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
 }
 
 .home-info {
   color: whitesmoke;
-  max-width: 60%;
+  padding: 6rem;
+  background-color: rgb(0, 0, 0, 0.6);
 }
 
 .home-info h1 {
   font-size: 8ch;
   color: white;
+  max-width: 50%;
 }
 
 .home-info p {
   font-size: 2.3ch;
   margin-top: 0.5rem;
   line-height: 1.5;
-  max-width: 80%;
+  max-width: 40%;
 }
 
 .home-info button {
   margin-top: 2rem;
   box-shadow: 0 0 20px -5px rgb(0, 0, 0, 0.2);
-}
-
-.home-image {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  max-width: max-content;
-}
-
-.home-image img {
-  max-height: 30rem;
-  box-shadow: 0 4px 38px -3px rgba(124, 159, 240, 0.3);
-}
-
-#img1 {
-  grid-column: 1/2;
-  grid-row: 1/1;
-  z-index: 1;
-}
-
-#img2 {
-  grid-column: 1/2;
-  grid-row: 1/1;
-  margin: 3rem 0 0 7rem;
 }
 
 .solutions h1 {
@@ -237,6 +220,12 @@ header {
   font-weight: 400;
   line-height: 1.2;
   cursor: pointer;
+}
+
+.side-nav h4:hover,
+.side-nav h4:focus {
+  font-weight: 600;
+  color: var(--purple);
 }
 
 .main-content {
@@ -298,13 +287,42 @@ header {
   color: var(--purple);
 }
 
-.pay-in-image img {
-  max-height: 30rem;
+.pay-in-info button:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+.pay-in-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 35rem;
+  aspect-ratio: 1/1;
   border-radius: var(--radius);
 }
 
-#gif {
-  max-width: 80%;
+.one {
+  background-image: url(./Images/collect.png);
+}
+
+.two {
+  background-image: url(./Images/multi-currency.jpg);
+}
+
+.three {
+  background-image: url(./Images/checkout.jpg);
+}
+
+.four {
+  background-image: url(./Images/africa.png);
+}
+
+.five {
+  background-image: url(./Images/customer\ wait.png);
+}
+
+.six {
+  background-image: url(./Images/payment-link.png);
 }
 
 .api {
@@ -431,6 +449,14 @@ footer {
     font-size: 1.6ch;
   }
 
+  .home-info h1 {
+    max-width: 75%;
+  }
+
+  .home-info p {
+    max-width: 60%;
+  }
+
   .pay-in {
     grid-template-columns: 1fr;
   }
@@ -439,7 +465,8 @@ footer {
 @media screen and (max-width: 1200px) {
   header,
   section,
-  footer {
+  footer,
+  .home-info {
     padding-inline: 4rem;
   }
 
@@ -513,6 +540,10 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+  .home-info {
+    padding-block: 4rem;
+  }
+
   .home-info h1,
   .api h1 {
     font-size: 4ch;
@@ -600,7 +631,8 @@ footer {
 @media screen and (max-width: 700px) {
   header,
   section,
-  footer {
+  footer,
+  .home-info {
     padding-inline: 2rem;
   }
 
@@ -704,6 +736,7 @@ footer {
 
   .home-info h1 {
     font-size: 5ch;
+    max-width: 100%;
   }
 
   .home-info p,
@@ -761,7 +794,8 @@ footer {
 @media screen and (max-width: 500px) {
   header,
   section,
-  footer {
+  footer,
+  .home-info {
     padding-inline: 1rem;
   }
 
