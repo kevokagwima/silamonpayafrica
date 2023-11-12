@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="logo">
-      <a href="services.html">
+      <a href="index.html">
         <img src="./Images/silamom_pay_2.png" alt="SilamonPayAfrica.com">
       </a>
     </div>
@@ -29,7 +29,7 @@
       <a href="contact.html" id="link">Contact</a>
     </div>
     <div class="account">
-      <a id="login" href="#">Login</a>
+      <a id="link" href="#">Login</a>
       <a href="#">
         <button id="signup">Create Account</button>
       </a>
@@ -42,16 +42,20 @@
   </header>
   <section class="home">
     <div class="home-info">
-      <h1>Collect payments in KES, TZS, UGX and more</h1>
-      <p><b>Silamon-pay-Africa</b> has everything you need, from multicurrency accounts to no-code Pay-In options, for
-        collecting payments across Africa and globally.</p>
+      <h1>Receive payments in UGX, TZS, KES, and other currencies.</h1>
+      <p>From multicurrency accounts to no-code transactions, <b>Silamon-pay-Africa</b> offers everything you need.
+        Options for pay-in, for receiving payments both domestically and internationally.
+      </p>
       <button>Create Account</button>
+      <div class="home-image">
+        <img src="./Images/mockup.png" alt="">
+      </div>
     </div>
   </section>
   <section class="solutions">
     <h1>Explore Our Solutions</h1>
     <div class="solution-box">
-      <div class="side-nav">
+      <!-- <div class="side-nav">
         <div class="pay-in-header">
           <a href="#one">
             <h4>Collect payments seamlessly with silamon Pay-In</h4>
@@ -83,15 +87,16 @@
               Pay-out</h4>
           </a>
         </div>
-      </div>
+      </div> -->
       <div class="main-content">
+        <button class="button left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="button right" onclick="plusDivs(1)">&#10095;</button>
         <div id="one" class="pay-in">
           <div class="pay-in-info">
-            <h4>Collect payments seamlessly with silamon Pay-In</h4>
-            <p>Improve customer experience and retention with silamonPay-In. It offers various payment methods,
-              including Payment Links, Virtual Accounts, POS terminal, and a seamless checkout experience. Your
-              customers can pay you through these channels:
-            </p>
+            <h4>Accept payments swiftly and simply with Silamon Pay-In.</h4>
+            <p>Use Silamon Pay-In to increase customer happiness and loyalty. Several payment methods are available,
+              including Payment Links, POS terminals, virtual accounts, and simple checkout. The following methods are
+              available to your clients for payment.</p>
             <ul>
               <li>
                 <i class="material-icons">check_circle</i>
@@ -99,7 +104,7 @@
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Bank Transfer
+                Wire Transfer
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
@@ -112,29 +117,25 @@
             </ul>
             <button>Learn More</button>
           </div>
-          <div class="pay-in-image one">
-          </div>
+          <div class="pay-in-image one"></div>
         </div>
         <div id="two" class="pay-in">
           <div class="pay-in-info">
-            <h4>Collect payments with Multicurrency Virtual Accounts</h4>
-            <p>Silamon offers a Multicurrency Accounts service that enables businesses to accept payments in multiple
-              currencies via Virtual Accounts without hidden charges. This service is beneficial for businesses in
-              various industries, including logistics, consulting, SAAS, e-commerce, travel & hospitality, and more.
-            </p>
+            <h4>Accept Payments using Virtual Accounts that Support Different Currencies.
+            </h4>
+            <p>Businesses may accept payments via Virtual Accounts in several currencies without paying extra costs when
+              they use Silamon's Multicurrency Accounts solution. This service may be useful to companies in a range of
+              industries, including travel and hospitality, SAAS, e-commerce, logistics, and consulting.</p>
             <button>Learn More</button>
           </div>
-          <div class="pay-in-image two">
-          </div>
+          <div class="pay-in-image two"></div>
         </div>
         <div id="three" class="pay-in">
           <div class="pay-in-info">
-            <h4>Fast, easy-to-use and fully optimised Silamon Checkout</h4>
-            <p>Silamon Checkout simplifies online payments. You can collect recurring subscription fees or sell
-              one-time
-              items with ease. Payment links can be created or our checkout API integrated to provide a better
-              checkout
-              experience for your customers. Your customers can pay you using Silamon Checkout:
+            <h4>Quick, user-friendly and fully optimised Silamon checkout</h4>
+            <p>Online payments are made easier with Silamon Checkout. It's simple to take one-time payments or collect
+              regular membership fees. You may connect our checkout API or build payment links to provide your customers
+              an improved checkout experience. With Silamon Checkout, your clients may make payments to you.
             </p>
             <ul>
               <li>
@@ -143,7 +144,7 @@
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Bank Transfer
+                Wire Transfer
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
@@ -152,63 +153,54 @@
             </ul>
             <button>Learn More</button>
           </div>
-          <div class="pay-in-image three">
-          </div>
+          <div class="pay-in-image three"></div>
         </div>
         <div id="four" class="pay-in">
           <div class="pay-in-info">
-            <h4>Create link, share, and accept
-              payments from anywhere</h4>
-            <p>Easily create payment links without coding and collect payments online via cards, bank transfers or
-              PayAttitude. Share the link with customers anywhere, even without a website, and start selling online
-              with
-              just a few simple steps:
+            <h4>Set up links, distribute them, and receive payments</h4>
+            <p>Without coding, easily build payment links and collect payments online using credit cards, wire
+              transfers, or PayAttitude. Share the link with buyers anywhere, even if you don't have a website, and you
+              can start selling online in just a few steps:
             </p>
             <ul id="extend">
               <li>
                 <i class="material-icons">check_circle</i>
-                Sign up on silamon
+                Create account on silamon
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Create a link to sell a product or service. Links can be customizable and
-                shared to as many customers as you wish
+                Generate a link to promote the product or service you are selling.
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Share the link with your customers through different channels online
+                Provide your clients with the link via various web sources.
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Receive funds into your silamon balance as soon as payment is made
+                Once payment has been made, you receive the money into your silamon balance.
               </li>
             </ul>
             <button>Learn More</button>
           </div>
-          <div class="pay-in-image four">
-          </div>
+          <div class="pay-in-image four"></div>
         </div>
         <div id="five" class="pay-in">
           <div class="pay-in-info">
-            <h4>Reduce customer wait times for
-              in-person transactions with
-              silamon POS Terminals</h4>
-            <p>We offer POS terminals to businesses like retail outlets, gas stations, and distributor touch points
-              for
-              card and transfer payments. Our Silamon POS terminal supports various transactions:
-            </p>
+            <h4>Silamon POS Terminals reduce client wait times for in-person transactions.</h4>
+            <p>We provide POS terminals for card and transfer payments to companies such as retail shops, petrol
+              stations and distributor touch points. Our Silamon POS terminal accepts the following transactions:</p>
             <ul>
               <li>
                 <i class="material-icons">check_circle</i>
-                Card withdrawals
+                ATM withdrawals
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Bank Transfer
+                Wire Transfer
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                VAS – Airtime Top-up, DSTV, Cable recharge, Electricity recharge
+                DSTV, cable recharge, electricity recharge, airtime top-up
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
@@ -225,39 +217,35 @@
             </ul>
             <button>Learn More</button>
           </div>
-          <div class="pay-in-image five">
-          </div>
+          <div class="pay-in-image five"></div>
         </div>
         <div id="six" class="pay-in">
           <div class="pay-in-info">
-            <h4>Send payments with silamon
-              Pay-out</h4>
-            <p>We offer a simple way to transfer funds to a recipient using various payment methods and payment
-              destinations. You can make transfers through multiple payment methods with a single API integration or
-              through the Silamon merchant dashboard:
-            </p>
+            <h4>Use silamon Pay-out to send money.</h4>
+            <p>We offer a straightforward approach for transferring funds to a recipient utilising a variety of payment
+              options and payment destinations. Transfers may be made via payment methods with a single API integration
+              or via the Silamon merchant dashboard:</p>
             <ul>
               <li>
                 <i class="material-icons">check_circle</i>
-                Bank Accounts Transfer
+                Wire Transfer
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Mobile Money Transfer
+                Mobile Money
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                silamon Balance to Balance transfer
+                Silamon Balance transfer
               </li>
               <li>
                 <i class="material-icons">check_circle</i>
-                Cash pick-ups (Coming soon)
+                Money pick-ups
               </li>
             </ul>
             <button>Learn More</button>
           </div>
-          <div class="pay-in-image six">
-          </div>
+          <div class="pay-in-image six"></div>
         </div>
       </div>
     </div>

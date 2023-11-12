@@ -48,16 +48,21 @@
 }
 
 .service {
-  padding: 1rem;
   border-radius: var(--radius);
   background-color: var(--yellow);
   background-image: url(./Images/to_do_vector_1.5c60cf89.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top right;
-  padding-top: 5rem;
   color: var(--black);
   box-shadow: 0 0 20px -5px rgb(0, 0, 0, 0.3);
+  min-height: 12rem;
+  display: flex;
+  align-items: end;
+}
+
+.service div {
+  padding: 1rem;
 }
 
 .service p {

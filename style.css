@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@400;500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -30,8 +31,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--purple);
+  background-color: var(--blue-1);
   border-radius: 30rem;
+}
+
+@font-face {
+  font-family: calisto;
+  src: url(./Calisto-Font/Calisto\ Font/CALIST.ttf);
+}
+
+@font-face {
+  font-family: futur;
+  src: url(./Fonts/futura/futura\ light\ bt.ttf);
 }
 
 html {
@@ -69,10 +80,15 @@ button {
   padding: 0.7em 1em;
   font-family: var(--other-font);
   border: none;
-  background-color: var(--purple);
+  background-color: var(--blue-1);
   color: white;
   font-size: 2.2ch;
   cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.08);
+  transition: 0.3s ease-in-out;
 }
 
 body {
@@ -81,6 +97,7 @@ body {
 
 section {
   padding: 4rem 6rem;
+  background-color: white;
 }
 
 header {
@@ -89,7 +106,7 @@ header {
   align-items: center;
   gap: 4rem;
   background-color: white;
-  box-shadow: 0 0 10px -5px rgb(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px -5px rgb(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -115,7 +132,7 @@ header {
 }
 
 #link:hover {
-  color: var(--purple);
+  color: var(--blue-1);
 }
 
 #link i {
@@ -148,7 +165,7 @@ header {
 }
 
 .div:nth-child(2) {
-  background-color: var(--purple);
+  background-color: var(--blue-1);
   width: 80%;
 }
 
@@ -158,39 +175,50 @@ header {
 }
 
 .home {
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-  background-color: #2760b68b;
-  background-image: url(./Images/hero.png);
+  background-color: var(--blue-2);
+  /* background-image: url(./Images/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  padding: 0;
+  background-position: center; */
+  max-height: 55rem;
+  overflow: hidden;
+  padding-block: 6rem;
 }
 
 .home-info {
   color: whitesmoke;
-  padding: 6rem;
-  background-color: rgb(0, 0, 0, 0.6);
+  /* background-color: rgb(0, 0, 0, 0.7); */
+  max-width: 60%;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .home-info h1 {
-  font-size: 8ch;
+  font-size: 7ch;
   color: white;
-  max-width: 50%;
 }
 
 .home-info p {
   font-size: 2.3ch;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   line-height: 1.5;
-  max-width: 40%;
+  max-width: 80%;
+  margin-inline: auto;
 }
 
 .home-info button {
   margin-top: 2rem;
   box-shadow: 0 0 20px -5px rgb(0, 0, 0, 0.2);
+}
+
+.home-image {
+  margin-top: 2rem;
+}
+
+.home-image img {
+  max-width: 100%;
+  min-height: 30rem;
+  object-fit: contain;
 }
 
 .solutions h1 {
@@ -225,14 +253,32 @@ header {
 .side-nav h4:hover,
 .side-nav h4:focus {
   font-weight: 600;
-  color: var(--purple);
+  color: var(--blue-1);
 }
 
 .main-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 4rem;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.button {
+  position: absolute;
+  top: 40%;
+  max-height: max-content;
+  background-color: transparent;
+  color: var(--blue-1);
+  font-size: 5ch;
+  padding: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
 }
 
 .pay-in {
@@ -240,6 +286,8 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   align-items: center;
+  max-width: 90%;
+  margin-inline: auto;
 }
 
 .pay-in-info {
@@ -248,13 +296,14 @@ header {
 
 .pay-in-info h4 {
   font-size: 4ch;
-  font-weight: 600;
+  font-family: calisto;
 }
 
 .pay-in-info p {
   margin-top: 1rem;
   line-height: 1.5;
-  font-size: 2.1ch;
+  font-size: 2.3ch;
+  font-family: futur;
 }
 
 .pay-in-info ul {
@@ -269,6 +318,10 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: futur;
+  background-color: var(--yellow);
+  padding: 1rem;
+  border-radius: var(--radius);
 }
 
 #extend li {
@@ -276,19 +329,19 @@ header {
 }
 
 .pay-in-info ul li i {
-  color: var(--purple);
+  color: var(--orange);
   background-color: transparent;
 }
 
 .pay-in-info button {
   margin-top: 2rem;
   background-color: transparent;
-  outline: 1px solid var(--purple);
-  color: var(--purple);
+  outline: 1px solid var(--blue-1);
+  color: var(--blue-1);
 }
 
 .pay-in-info button:hover {
-  background-color: var(--purple);
+  background-color: var(--blue-1);
   color: white;
 }
 
@@ -296,8 +349,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-height: 35rem;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/0.8;
+  min-width: 100%;
   border-radius: var(--radius);
 }
 
@@ -343,7 +396,7 @@ header {
 
 .api button {
   margin-top: 2rem;
-  background-color: var(--purple);
+  background-color: var(--blue-1);
 }
 
 .footer-logo img {
@@ -419,10 +472,14 @@ footer {
 
 .footer-socials i {
   font-size: 3ch;
-  color: var(--purple);
+  color: var(--blue-1);
 }
 
 @media screen and (max-width: 1400px) {
+  .home-info {
+    max-width: 70%;
+  }
+
   .side-nav {
     top: 5rem;
   }
@@ -447,18 +504,6 @@ footer {
 @media screen and (max-width: 1300px) {
   .side-nav h4 {
     font-size: 1.6ch;
-  }
-
-  .home-info h1 {
-    max-width: 75%;
-  }
-
-  .home-info p {
-    max-width: 60%;
-  }
-
-  .pay-in {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -490,7 +535,11 @@ footer {
   }
 
   .pay-in-info h4 {
-    font-size: 4ch;
+    font-size: 3.5ch;
+  }
+
+  .pay-in-image {
+    aspect-ratio: 1/1;
   }
 }
 
@@ -508,14 +557,14 @@ footer {
   }
 
   .home-info h1 {
-    font-size: 5ch;
+    font-size: 6ch;
   }
 
   .home-info p,
   .pay-in-info p,
   li,
   .api p {
-    font-size: 2ch;
+    font-size: 2.2ch;
   }
 
   .home-image img {
@@ -535,16 +584,55 @@ footer {
   }
 
   .pay-in-info h4 {
-    font-size: 3.5ch;
+    font-size: 4ch;
+  }
+
+  .pay-in-info p {
+    font-size: 2.5ch;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home-info {
+    max-width: 100%;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    left: -1.5rem;
+  }
+
+  .right {
+    right: -1.5rem;
+  }
+
+  .pay-in {
+    grid-template-columns: 1fr;
+    min-width: 50%;
+  }
+
+  .pay-in-image {
+    aspect-ratio: 1/0.5;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .home-info {
-    padding-block: 4rem;
+  .home {
+    padding: 4rem;
   }
 
-  .home-info h1,
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-info h1 {
+    font-size: 5.2ch;
+  }
+
   .api h1 {
     font-size: 4ch;
   }
@@ -566,12 +654,8 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-  .home {
-    flex-direction: column;
-  }
-
   .home-info {
-    max-width: 100%;
+    padding: 0;
   }
 
   .home-info h1 {
@@ -583,10 +667,6 @@ footer {
   li,
   .api p {
     font-size: 2.2ch;
-  }
-
-  .home-image img {
-    max-height: 20rem;
   }
 
   .solutions h1,
@@ -615,11 +695,7 @@ footer {
   }
 
   .pay-in-info h4 {
-    font-size: 3ch;
-  }
-
-  .pay-in-image img {
-    max-width: 100%;
+    font-size: 4ch;
   }
 
   footer {
@@ -631,8 +707,7 @@ footer {
 @media screen and (max-width: 700px) {
   header,
   section,
-  footer,
-  .home-info {
+  footer {
     padding-inline: 2rem;
   }
 
@@ -644,16 +719,8 @@ footer {
     display: none;
   }
 
-  .home {
-    flex-direction: column;
-  }
-
-  .home-info {
-    max-width: 100%;
-  }
-
   .home-info h1 {
-    font-size: 6ch;
+    font-size: 5ch;
   }
 
   .home-info p {
@@ -665,10 +732,6 @@ footer {
   li,
   .api p {
     font-size: 2.2ch;
-  }
-
-  .home-image img {
-    max-height: 30rem;
   }
 
   .solutions h1,
@@ -727,16 +790,11 @@ footer {
   }
 
   .home {
-    flex-direction: column;
-  }
-
-  .home-info {
-    max-width: 100%;
+    padding-inline: 2rem;
   }
 
   .home-info h1 {
-    font-size: 5ch;
-    max-width: 100%;
+    font-size: 4.5ch;
   }
 
   .home-info p,
@@ -744,10 +802,6 @@ footer {
   li,
   .api p {
     font-size: 2ch;
-  }
-
-  .home-image img {
-    max-height: 30rem;
   }
 
   .solutions h1,
@@ -795,7 +849,7 @@ footer {
   header,
   section,
   footer,
-  .home-info {
+  .home {
     padding-inline: 1rem;
   }
 
@@ -813,7 +867,7 @@ footer {
   }
 
   .home-info h1 {
-    font-size: 5ch;
+    font-size: 4.5ch;
   }
 
   .home-info p,
@@ -824,7 +878,8 @@ footer {
   }
 
   .home-image img {
-    max-height: 30rem;
+    max-width: 100%;
+    min-height: 10rem;
   }
 
   .solutions h1,
@@ -834,6 +889,18 @@ footer {
 
   .solution-box {
     margin-top: 3rem;
+  }
+
+  .left {
+    left: -0.5rem;
+  }
+
+  .right {
+    right: -0.5rem;
+  }
+
+  .pay-in-image {
+    aspect-ratio: 1/1;
   }
 
   .side-nav {
@@ -885,7 +952,7 @@ footer {
   }
 
   .home-info h1 {
-    font-size: 3.8ch;
+    font-size: 3.5ch;
   }
 
   .home-info p,
@@ -957,7 +1024,7 @@ footer {
   }
 
   .home-info h1 {
-    font-size: 3.5ch;
+    font-size: 3.2ch;
   }
 
   .home-info p,
